@@ -1,90 +1,327 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>საბავშვო ბაღი "დილა"</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>საბავშვო ბაღი „დილა"</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
-
 <body>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+</script>
+  <!-- ===== HEADER ===== -->
+  <header class="header"><!-- მთავარი ზედა ბარი (navigation/header) -->
+    <div class="nav-wrap"> <!-- კონტეინერი რომელიც აწყობს ლოგოს და მენიუს ერთ ხაზში -->
+      <div class="logo">🌅 <span>დილა</span></div><!-- ლოგო ტექსტით -->
+    <nav class="nav"><!-- ნავიგაციის ბლოკი -->
 
-<header class="header">
-    <div class="container nav">
-        <h1>🌅 დილა</h1>
-        <nav>
-            <a href="#">მთავარი</a>
-            <a href="#">ჩვენ შესახებ</a>
-            <a href="#">პროგრამა</a>
-            <a href="#">კონტაქტი</a>
-        </nav>
+  <!-- кнопка меню -->
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <!-- скрытое меню -->
+  <div class="menu" id="menu"><!-- დამალული dropdown მენიუ -->
+
+   <a href="#about">ჩვენ შესახებ</a> <!-- ლინკი about სექციაზე -->
+        <a href="#info">ინფორმაცია</a> <!-- ლინკი info სექციაზე -->
+        <a href="#program">პროგრამა</a> <!-- ლინკი program სექციაზე -->
+        <a href="#gallery">გალერეა</a> <!-- ლინკი gallery სექციაზე -->
+        <a href="#contact">კონტაქტი</a> <!-- ლინკი contact სექციაზე -->
+
+  </div>
+
+</nav>
+     
+    <button class="hamburger" id="burger" aria-label="Menu"> <!-- მობილურის ჰამბურგერ მენიუ -->
+      <span></span><span></span><span></span> <!-- სამი ხაზი (icon) -->
+      </button>
     </div>
-</header>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#about">🏠 ჩვენ შესახებ</a>
+      <a href="#info">📋 ინფორმაცია</a>
+      <a href="#program">🎓 პროგრამა</a>
+      <a href="#gallery">📸 გალერეა</a>
+      <a href="#contact">📞 კონტაქტი</a>
+    </nav>
+  </header>
 
-<section class="hero">
-    <div class="hero-overlay"></div>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+      <div class="shape s4"></div>
+      <div class="shape s5"></div>
+    </div>
     <div class="hero-content">
-        <h2 class="herotextchildhood">ბედნიერი ბავშვობა იწყება აქ💛</h2>
-        <p>უსაფრთხო, თბილი და პროფესიონალური გარემო თქვენი ბავშვისთვის</p>
-        <a href="#" class="btn">დაგვიკავშირდი</a>
+      <div class="hero-badge">🌟 ბათუმის საუკეთესო ბაღი</div>
+      <h1>ბედნიერი ბავშვობა<br><em>იწყება აქ!</em></h1>
+      <p>სიყვარულით, თამაშით და შემოქმედებით ვზრდით ბავშვებს — ისე, რომ ყოველი დილა სიხარული იყოს.</p>
+      <div class="hero-btns">
+        <a class="btn btn-main" href="#contact">📞 დაგვიკავშირდი</a>
+        <a class="btn btn-outline" href="#about">გაიგე მეტი</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>12+</strong><span>წელი გამოცდილება</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>200+</strong><span>ბედნიერი ბავშვი</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>30+</strong><span>მასწავლებელი</span></div>
+      </div>
     </div>
-</section>
+    <div class="hero-image">
+      <div class="hero-img-frame">
+        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80" alt="ბედნიერი ბავშვები">
+        <div class="hero-img-badge">😊 ყოველდღე სიხარული!</div>
+      </div>
+    </div>
+  </section>
 
-<section class="about container">
-    <h2>ჩვენ შესახებ</h2>
-    <p>
-        საბავშვო ბაღი "დილა" არის ადგილი, სადაც ბავშვები იზრდებიან სიყვარულით,
-        სწავლობენ თამაშით და ვითარდებიან უსაფრთხო გარემოში.
-    </p>
-</section>
-
-<section class="why">
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
     <div class="container">
-        <h2>რატომ ჩვენ?</h2>
-        <div class="why-grid">
-            <div class="why-card">👩‍🏫 პროფესიონალი გუნდი</div>
-            <div class="why-card">🛡️ უსაფრთხო გარემო</div>
-            <div class="why-card">🍎 ჯანსაღი კვება</div>
-            <div class="why-card">🎯 ინდივიდუალური მიდგომა</div>
+      <div class="about-grid">
+        <div class="about-images">
+          <img class="ab-img ab-img-1" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="ბაღის ეზო">
+          <img class="ab-img ab-img-2" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80" alt="ბავშვები">
+          <div class="ab-float-card">
+            <div class="ab-float-icon">🏆</div>
+            <div>
+              <strong>საუკეთესო ბაღი</strong>
+              <span>ბათუმი 2023</span>
+            </div>
+          </div>
         </div>
+        <div class="about-text">
+          <div class="label-tag">💛 ჩვენ შესახებ</div>
+          <h2>სახლივით თბილი,<br>სკოლივით საინტერესო</h2>
+          <p class="about-lead">საბავშვო ბაღი „დილა" 2012 წლიდან ზრდის ბავშვებს სიყვარულით, სიხარულით და პასუხისმგებლობით.</p>
+          <p>ჩვენ გვჯერა, რომ ყოველ ბავშვს აქვს უნიკალური ნიჭი. ჩვენი მიზანია ამ ნიჭის გამოვლენა — თამაშის, შემოქმედების და ახალი აღმოჩენების გზით. ჩვენი მასწავლებლები ყველა ბავშვს ექცევიან ინდივიდუალურად, რათა ყველამ იგრძნოს სიყვარული და დაფასება.</p>
+          <div class="about-features">
+            <div class="af-item">✅ სერტიფიცირებული მასწავლებლები</div>
+            <div class="af-item">✅ 5 სხვადასხვა ასაკობრივი ჯგუფი</div>
+            <div class="af-item">✅ ბუნებრივი კვება</div>
+            <div class="af-item">✅ 24/7 უსაფრთხოება</div>
+            <div class="af-item">✅ ვიდეომეთვალყურეობა</div>
+            <div class="af-item">✅ სამედიცინო პერსონალი</div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="program container">
-    <h2 class="programtext">ჩვენი პროგრამა</h2>
-    <div class="cards">
-        <div class="card">🎨 კრეატიული სწავლა</div>
-        <div class="card">🧠 განვითარება</div>
-        <div class="card">⚽ აქტივობები</div>
+  <!-- ===== BIG INFO BLOCK ===== -->
+  <section class="info-section" id="info">
+    <div class="container">
+      <div class="section-header">
+        <div class="label-tag white-tag">📋 სრული ინფორმაცია</div>
+        <h2>ყველაფერი რაც უნდა იცოდეთ<br>ჩვენ შესახებ</h2>
+        <p>გამჭვირვალობა ჩვენი პრინციპია — გეკითხები, ვპასუხობთ!</p>
+      </div>
+      <div class="info-grid">
+
+        <div class="info-card ic-yellow">
+          <div class="ic-icon">🏛️</div>
+          <h3>ბაღის ისტორია</h3>
+          <p>„დილა" დაარსდა 2012 წელს. გამოცდილი პედაგოგების გუნდმა გადაწყვიტა შეექმნა ადგილი, სადაც ბავშვი ნამდვილად ბედნიერი იქნებოდა. 12 წელზე მეტია, ჩვენ ვუვლით ბავშვთა განვითარებას.</p>
+        </div>
+
+        <div class="info-card ic-blue">
+          <div class="ic-icon">📍</div>
+          <h3>ადგილმდებარეობა და გარემო</h3>
+          <p>ბაღი მდებარეობს ბათუმის ცენტრალურ ნაწილში, მწვანე ეზოთი. გვაქვს ფართო სათამაშო მოედანი, სპორტული კუთხე, ბოსტანი და ცხოველთა კუთხე. მთლიანი ტერიტორია 2000 მ²-ია.</p>
+        </div>
+
+        <div class="info-card ic-green">
+          <div class="ic-icon">👩‍🏫</div>
+          <h3>ჩვენი მასწავლებლები</h3>
+          <p>ჩვენს გუნდში 30+ სპეციალისტია: პედაგოგები, ფსიქოლოგი, ლოგოპედი, ქართველი და უცხოელი მასწავლებლები. ყველა სერტიფიცირებულია და გადის რეგულარულ ტრეინინგებს.</p>
+        </div>
+
+        <div class="info-card ic-pink">
+          <div class="ic-icon">🍎</div>
+          <h3>კვება და ჯანმრთელობა</h3>
+          <p>სამჯერ დღეში სრულფასოვანი კვება, დიეტოლოგის მიერ შედგენილი მენიუ. ვიყენებთ მხოლოდ ბუნებრივ, ადგილობრივ პროდუქტებს. ბაღში ყოველდღე ჩვენი ექთანია.</p>
+        </div>
+
+        <div class="info-card ic-orange">
+          <div class="ic-icon">📅</div>
+          <h3>სამუშაო განრიგი</h3>
+          <p>ბაღი მუშაობს ორშაბათიდან პარასკევამდე, <strong>8:00 — 18:00</strong>. გვაქვს ნახევარდღიანი ჯგუფიც (8:00–13:00). საჭიროების შემთხვევაში შესაძლებელია 19:00-მდე გახანგრძლივება.</p>
+        </div>
+
+        <div class="info-card ic-purple">
+          <div class="ic-icon">💰</div>
+          <h3>გადასახადი</h3>
+          <p>სრული დღე: <strong>450 ლარი/თვე</strong><br>ნახევარი დღე: <strong>280 ლარი/თვე</strong><br>კვება შედის ღირებულებაში. მრავალშვილიანი ოჯახებისთვის 10% ფასდაკლება.</p>
+        </div>
+
+        <div class="info-card ic-teal">
+          <div class="ic-icon">🔒</div>
+          <h3>უსაფრთხოება</h3>
+          <p>ბაღი აღჭურვილია 24/7 ვიდეომეთვალყურეობით, ჩაკეტილი ტერიტორიით. ბავშვს გაიყვანს მხოლოდ მშობელი ან მასთან ავტორიზებული პირი.</p>
+        </div>
+
+        <div class="info-card ic-red">
+          <div class="ic-icon">🌍</div>
+          <h3>ენობრივი პროგრამა</h3>
+          <p>ქართულ სწავლებასთან ერთად, ბავშვები ეცნობიან ინგლისურ ენას — სახალისო, ინტერაქტიული მეთოდებით. 5 წლიდან — ინგლისური ყოველდღე.</p>
+        </div>
+
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="gallery">
-    <h2 class="gallerytext">გალერეა</h2>
-    <div class="images">
-        <img src="artem-kniaz-DqgMHzeio7g-unsplash.jpg">
-        <img src="marisa-howenstine-Cq9slNxV8YU-unsplash.jpg">
-        <img src="ben-wicks-iDCtsz-INHI-unsplash.jpg">
-        <img src="pexels-kseniachernaya-8535592.jpg">
+  <!-- ===== PROGRAM ===== -->
+  <section class="section" id="program" style="background:#fff9f0;">
+  
+  </section>
+<hr class="hr1">
+  <!-- ===== GALLERY ===== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="label-tag">📸 გალერეა</div>
+        <h2>ჩვენი ყოველდღიური ცხოვრება</h2>
+        <p>ერთი დღე ბაღ „დილაში" — სიხარული, სწავლა, მეგობრობა</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-big">
+          <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80" alt="ბავშვები">
+          <div class="gi-label">🎉 სიხარულის დღე</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="გაკვეთილი">
+          <div class="gi-label">📚 გაკვეთილი</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80" alt="ფერები">
+          <div class="gi-label">🎨 ხატვა</div>
+        </div>
+        <div class="gallery-item">
+          <img src="marisa-howenstine-Cq9slNxV8YU-unsplash.jpg" alt="გასეირნება">
+          <div class="gi-label">🌳 გასეირნება</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?w=500&q=80" alt="სპორტი">
+          <div class="gi-label">⚽ სპორტი</div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="reviews container">
-    <h2>მშობლების შეფასებები</h2>
-    <div class="review-box">
-        <div class="review"> "საუკეთესო ბაღი!" ⭐⭐⭐⭐⭐</div>
-        <div class="review"> "ბავშვი ძალიან ბედნიერია"⭐⭐⭐⭐⭐</div>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="label-tag">💬 მშობლები ამბობენ</div>
+        <h2>ჩვენი ოჯახების შეფასება</h2>
+      </div>
+      <div class="t-grid">
+        <div class="t-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p>„ჩემი ქალიშვილი ყოველ დილით სიხარულით მიდის ბაღში. ეს ყველაფერს ამბობს! მასწავლებლები საოცრად ზრუნვიანები არიან."</p>
+          <div class="t-author">
+            <div class="t-avatar">ნ</div>
+            <div><strong>ნინო ბერიძე</strong><br><small>3 წლის ბავშვის დედა</small></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p>„გასაოცარი გარემო, თბილი მასწავლებლები. „დილა" ჩვენი მეორე სახლია. ჩვენი ვაჟი ისე ბევრი რამ ისწავლა!"</p>
+          <div class="t-author">
+            <div class="t-avatar">გ</div>
+            <div><strong>გიორგი ჩხეიძე</strong><br><small>4 წლის ბავშვის მამა</small></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">⭐⭐⭐⭐⭐</div>
+          <p>„ბაღის გარემო, კვება, პროგრამა — ყველაფერი სრულყოფილია. ვწუხვარ, რომ ადრე არ ვიცოდით „დილის" შესახებ!"</p>
+          <div class="t-author">
+            <div class="t-avatar">მ</div>
+            <div><strong>მარიამ კვარაცხელია</strong><br><small>5 წლის ბავშვის დედა</small></div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="cta">
-    <h2>დარეგისტრირდი დღესვე</h2>
-    <a href="#" class="btn">დაგვიკავშირდი</a>
-</section>
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-text">
+          <div class="label-tag white-tag">📞 კონტაქტი</div>
+          <h2>დაგვიკავშირდი<br>დღესვე! 👋</h2>
+          <p>სიხარულით ვიქნებით მზად, გიპასუხოთ ნებისმიერ კითხვაზე.</p>
+         
+        </div>
+    
+      </div>
+    </div>
+  </section>
 
-<footer>
-    <p>© 2026 საბავშვო ბაღი "დილა"</p>
-</footer>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">🌅 <span>დილა</span></div>
+          <p>სიყვარულით ვზრდით ბავშვებს 2012 წლიდან. ყოველი დილა ახალი სიხარულია!</p>
+          <div class="social-links">
+            <a href="#">📘 Facebook</a>
+            <a href="#">📷 Instagram</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>სწრაფი ბმულები</h4>
+          <a href="#about">ჩვენ შესახებ</a>
+          <a href="#info">ინფორმაცია</a>
+          <a href="#program">პროგრამა</a>
+          <a href="#gallery">გალერეა</a>
+          <a href="#contact">კონტაქტი</a>
+        </div>
+        <div class="footer-col">
+          <h4>პროგრამები</h4>
+          <a href="#">შემოქმედება</a>
+          <a href="#">სწავლა</a>
+          <a href="#">სპორტი</a>
+          <a href="#">მუსიკა</a>
+          <a href="#">ინგლისური</a>
+        </div>
+        <div class="footer-col">
+          <h4>კონტაქტი</h4>
+          <p>📱 +995 555 123 456</p>
+          <p>📧 dila.batumi@gmail.com</p>
+          <p>📍 ბათუმი, ქართველთა ქ. 15</p>
+          <p>🕐 ორშ–პარ 8:00–18:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 საბავშვო ბაღი „დილა" — ყველა უფლება დაცულია ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
