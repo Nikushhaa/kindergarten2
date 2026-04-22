@@ -19,20 +19,17 @@ function toggleMenu() {
     <div class="nav-wrap"> <!-- კონტეინერი რომელიც აწყობს ლოგოს და მენიუს ერთ ხაზში -->
       <div class="logo">🌅 <span>დილა</span></div><!-- ლოგო ტექსტით -->
     <nav class="nav"><!-- ნავიგაციის ბლოკი -->
-
-  <!-- кнопка меню -->
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-  <!-- скрытое меню -->
-  <div class="menu" id="menu"><!-- დამალული dropdown მენიუ -->
-
-   <a href="#about">ჩვენ შესახებ</a> <!-- ლინკი about სექციაზე -->
-        <a href="#info">ინფორმაცია</a> <!-- ლინკი info სექციაზე -->
-        <a href="#program">პროგრამა</a> <!-- ლინკი program სექციაზე -->
-        <a href="#gallery">გალერეა</a> <!-- ლინკი gallery სექციაზე -->
-        <a href="#contact">კონტაქტი</a> <!-- ლინკი contact სექციაზე -->
-
+ 
+  <nav class="nav">
+  <div class="nav-links">
+    <a href="#about">🏠 ჩვენ შესახებ</a>
+    <a href="#info">📋 ინფორმაცია</a>
+    <a href="#program">🎓 პროგრამა</a>
+    <a href="#gallery">📸 გალერეა</a>
+    <a href="#contact">📞 კონტაქტი</a>
   </div>
+</nav>
+ 
 
 </nav>
      
@@ -61,7 +58,7 @@ function toggleMenu() {
     <div class="hero-content">
       <div class="hero-badge">🌟 ბათუმის საუკეთესო ბაღი</div>
       <h1>ბედნიერი ბავშვობა<br><em>იწყება აქ!</em></h1>
-      <p>სიყვარულით, თამაშით და შემოქმედებით ვზრდით ბავშვებს — ისე, რომ ყოველი დილა სიხარული იყოს.</p>
+      <p class="heropclass">სიყვარულით, თამაშით და შემოქმედებით ვზრდით ბავშვებს — ისე, რომ ყოველი დილა სიხარული იყოს.</p>
       <div class="hero-btns">
         <a class="btn btn-main" href="#contact">📞 დაგვიკავშირდი</a>
         <a class="btn btn-outline" href="#about">გაიგე მეტი</a>

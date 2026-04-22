@@ -198,7 +198,7 @@ h2 {
 }
 
 .hamburger span {
-  display: block;
+  display: none;
   width: 22px;
   height: 2.5px;
   background: var(--primary);
@@ -230,7 +230,7 @@ h2 {
    ======================================== */
 .hero {
   min-height: 92vh;/* ეკრანის სიმაღლის 92% */
-  background: linear-gradient(135deg, #ffec94 0%, #ffd3a1 35%, #ffb3c6 70%, #c5d5ff 100%);
+  background: url(the-progress-of-construction-of-the-kindergarten-building-modern-decoration-of-building-facades-2C1A0PN.jpg);
   display: flex;/* ელემენტების განლაგება */
   align-items: center;
   padding: 60px 24px;
@@ -261,6 +261,7 @@ h2 {
   position: relative;
   max-width: 560px;
   z-index: 2;
+  color: white;
 }
 
 .hero-badge {
@@ -929,7 +930,7 @@ h2 {
   padding: 10px 14px;
   text-decoration: none;
   color: #222;
-  border-radius: 10px; /*კუთხის რადიუსი*/
+  border-radius: 10px; /*კუთხის რადიუსი*/ 
   transition: 0.25s ease;
   font-weight: 500;
 }
@@ -939,4 +940,7 @@ h2 {
   background: #f0f4ff;/*ბექგრაუნდი (უკანაფონი)*/
   color: #4dabf7;
   transform: translateX(4px);
+}
+.heropclass{
+ color:white;
 }
